@@ -379,7 +379,7 @@ body.history-open #historyContainer {
 
     <!-- Filters -->
     <div style="display:flex; gap:8px; margin-bottom:10px;">
-      <input type="text" value="BR North" disabled style="width:140px;">
+      <input type="text" value="BR Malate" disabled style="width:140px;">
       <input type="date" id="historyFrom">
       <input type="date" id="historyTo">
       <button onclick="fetchHistory()">Fetch</button>
@@ -434,7 +434,7 @@ body.history-open #historyContainer {
 
 
 <div id="topBar" class="cpcc-tabs">
-  <div id="outletBox">BR North</div>
+  <div id="outletBox">BR Malate</div>
 
 
 <select id="customerSelect" onchange="handleCustomer()">
@@ -485,9 +485,9 @@ body.history-open #historyContainer {
 
   const _k = "CPCC_LJC_2026_PRIVATE_KEY";
 
-  const _t = "BR_NORTH_POS01";
-  const _o = "BR North";
-  window.OUTLET_NAME    = "BR North";  // Friendly name for Google Sheet
+  const _t = "BR_MALATE_POS01";
+  const _o = "BR Malate";
+  window.OUTLET_NAME    = "BR Malate";  // Friendly name for Google Sheet
   window.FIXED_OUTLET   = window.OUTLET_NAME; // legacy reference
   window.HISTORY_OUTLET = window.OUTLET_NAME;
   window.HISTORY_URL    = "https://script.google.com/macros/s/AKfycbzqT5VRNzKoSH76gbQUOyRuqBPpHBEYLlAtkJPF6lgmLLpAy3ELxADSUT067reuMje66A/exec";
@@ -712,6 +712,11 @@ function validateTerminal() {
       "?apiKey=" + encodeURIComponent(API_KEY) +
       "&callback=_ucb";
     document.head.appendChild(s);
+  }
+
+  function fetchMenu() {
+    // your original fetchMenu body here
+    // leave it as is, or define a minimal dummy if not needed yet
   }
 
   /* ===== EXPORT FOR PIN FLOW ===== */
